@@ -1,5 +1,9 @@
 import requests
 import re
+from PIL import Image, ImageFont, ImageDraw
+from datetime import datetime
+ 
+gettime = datetime.now()
  
 subreddit = 'catpictures'
 limit = 1
@@ -27,3 +31,9 @@ print(url)
 r = requests.get(url)
 with open("cat.jpg", "wb") as f:
     f.write(r.content)
+
+original = Image.open("cat.jpg")
+title_font = ImageFont.truetype('Arial_Greek_Bold.ttf', 200)
+
+hournow = gettime.hour
+print(hournow)
