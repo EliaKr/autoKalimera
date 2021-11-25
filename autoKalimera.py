@@ -37,3 +37,17 @@ title_font = ImageFont.truetype('Arial_Greek_Bold.ttf', 200)
 
 hournow = gettime.hour
 print(hournow)
+
+text = ""
+if hournow >= 21:
+	text = "Καληνύχτα"
+elif hournow >= 17:
+	text = "Καλό Απόγευμα"
+elif hournow >= 12:
+	text = "Καλησπέρα"
+elif hournow >= 5:
+	text = "Καλημέρα"
+elif hournow >= 0:
+	text = "Καληνύχτα"
+
+print(text)
