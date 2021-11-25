@@ -21,5 +21,9 @@ children = data['children']
 
 childrenstr="".join(map(str,children))
 
-link = re.search("'url_overridden_by_dest': '(.+?)',", childrenstr).group(1)
-print(link)
+url = re.search("'url_overridden_by_dest': '(.+?)',", childrenstr).group(1)
+print(url)
+
+r = requests.get(url)
+with open("cat.jpg", "wb") as f:
+    f.write(r.content)
