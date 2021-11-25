@@ -9,7 +9,7 @@ gettime = datetime.now()
 subreddit = 'catpictures'
 limit = 1
 timeframe = 'hour'
-listing = 'best'
+listing = 'new'
 
 while True:
 	def get_reddit(subreddit,listing,limit,timeframe):
