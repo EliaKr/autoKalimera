@@ -73,7 +73,7 @@ def makepic():
 	image_editable = ImageDraw.Draw(original)
 	image_editable.text((25,25), text, (25, 25, 25), font=font)
 	image_editable.text((30,30), text, (25, 25, 25), font=font)
-	image_editable.text((27,27), text, (242, 242, 242), font=font)
+	image_editable.text((29,29), text, (242, 242, 242), font=font)
 	original.save("kalimera.jpg")
 
 while True:
@@ -104,3 +104,5 @@ while True:
 		makepic()
 	else:
 		print("No jpg found")
+	
+	time.sleep(600)
